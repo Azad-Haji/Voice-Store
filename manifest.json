@@ -2,7 +2,7 @@
   "name": "المخزّن الصوتي",
   "short_name": "المخزّن",
   "description": "تطبيق لتسجيل المنتجات بالصوت",
-  "start_url": "/voice-store/",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#667eea",
   "theme_color": "#667eea",
@@ -19,6 +19,19 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    }
+    {
+      "src": "SplashScreen.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
   "lang": "ar",
