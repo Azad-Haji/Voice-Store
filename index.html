@@ -21,6 +21,38 @@
     <link rel="apple-touch-startup-image" href="SplashScreen.png">
     
     <link rel="stylesheet" href="style.css">
+
+    <!-- زر التثبيت -->
+    <button id="installBtn" style="display: none; position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%); padding: 15px 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 10px; font-size: 16px; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 1000; cursor: pointer;">
+        📥 تثبيت التطبيق
+    </button>
+
+    <script>
+        let deferredPrompt;
+        
+        window.addEventListener('beforeinstallprompt', (e) => {
+            console.log('beforeinstallprompt fired');
+            e.preventDefault();
+            deferredPrompt = e;
+            document.getElementById('installBtn').style.display = 'block';
+        });
+        
+        document.getElementById('installBtn').addEventListener('click', async () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                console.log(`User response: ${outcome}`);
+                deferredPrompt = null;
+                document.getElementById('installBtn').style.display = 'none';
+            }
+        });
+        
+        window.addEventListener('appinstalled', () => {
+            console.log('PWA installed successfully');
+            document.getElementById('installBtn').style.display = 'none';
+        });
+    </script>
+    
 </head>
 <body>
     <div class="container">
