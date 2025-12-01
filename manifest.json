@@ -2,7 +2,7 @@
   "name": "المخزّن الصوتي",
   "short_name": "المخزّن",
   "description": "تطبيق لتسجيل المنتجات بالصوت",
-  "start_url": "/",
+  "start_url": "/voice-store/",
   "display": "standalone",
   "background_color": "#667eea",
   "theme_color": "#667eea",
