@@ -1,6 +1,6 @@
 const CACHE_NAME = 'voice-store-v1';
 const urlsToCache = [
-  '/',
+  '/voice-store/',
   '/index.html',
   '/style.css',
   '/script.js',
