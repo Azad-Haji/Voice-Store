@@ -1,11 +1,11 @@
 const CACHE_NAME = 'voice-store-v1';
 const urlsToCache = [
   '/voice-store/',
-  '/index.html',
-  '/style.css',
-  '/script.js',
-  '/favicon-192.png',
-  '/favicon-512.png'
+  '/voice-store/index.html',
+  '/voice-store/style.css',
+  '/voice-store/script.js',
+  '/voice-store/favicon-192.png',
+  '/voice-store/favicon-512.png'
 ];
 
 // تثبيت Service Worker
